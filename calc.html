@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+
+    <script src="calc.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="Calculator">
+        <form>
+            <h1> Calculator </h1>
+    <div class="output">
+        <input type="text" id="output" readonly><br><br>
+    </div>
+    <div>
+        <input type="button" value="C" onclick="output.value = '' " class="operator">
+        <input type="button" value="&#9003" onclick= "deleteNum()" class="operator">
+        <input type="button" value="%" onclick="appendToOutput('%')" class="operator">
+        <input type="button" value="/" onclick="appendToOutput('/')" class="operator">
+    </div>
+    <div>
+        <input type="button" value="7" onclick="appendToOutput('7')">
+        <input type="button" value="8" onclick="appendToOutput('8')">
+        <input type="button" value="9" onclick="appendToOutput('9')">
+        <input type="button" value="&times;" onclick="appendToOutput('*')" class="operator">
+    </div>
+    <div>
+        <input type="button" value="4" onclick="appendToOutput('4')">
+        <input type="button" value="5" onclick="appendToOutput('5')">
+        <input type="button" value="6" onclick="appendToOutput('6')">
+        <input type="button" value="&minus;" onclick="appendToOutput('-')" class="operator">
+    </div>
+    <div>
+        <input type="button" value="1" onclick="appendToOutput('1')">
+        <input type="button" value="2" onclick="appendToOutput('2')">
+        <input type="button" value="3" onclick="appendToOutput('3')">
+        <input type="button" value="+" onclick="appendToOutput('+')" class="operator">
+    </div>
+    <div>
+        <input type="button" value="00" onclick="appendToOutput('00')">
+        <input type="button" value="0"  onclick="appendToOutput('0')">
+        <input type="button" value="."  onclick="appendToOutput('.')" class="operator">
+        <input type="button" value="&equals;" onclick="calculate()" class="operator">
+
+         <!-- <input type="button" value="&equals;" onclick="calculate()"> -->
+    </div>
+</form>
+</div>
+</div>
+</body>
+</html>
